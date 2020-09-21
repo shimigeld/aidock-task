@@ -1,0 +1,34 @@
+<mat-table [dataSource]="dataSource" matSort *ngIf="isFoundFlights">
+    <ng-container matColumnDef="destination">
+      <mat-header-cell *matHeaderCellDef> Destination </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.destination}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="departure">
+      <mat-header-cell *matHeaderCellDef> Departure </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.departure.toLocaleDateString('en-IL')}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="arrival">
+      <mat-header-cell *matHeaderCellDef> Arrival </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.arrival.toLocaleDateString('en-IL')}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="connections">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Connections </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.connections}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+        <mat-header-cell *matHeaderCellDef> Price (in $) </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="length">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Length (in Hours) </mat-header-cell >
+        <mat-cell *matCellDef="let element"> {{element.length}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>

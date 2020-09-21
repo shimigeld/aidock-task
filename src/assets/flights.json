@@ -1,0 +1,35 @@
+[
+    {
+        "destination":"Austin",
+        "departure":"02/01/2020",
+        "arrival":"02/02/2020",
+        "connections": 2,
+        "price": 500,
+        "length": 9
+    },
+    {
+
+        "destination":"LAX",
+        "departure":"02/03/2020",
+        "arrival":"02/04/2020",
+        "connections": 1,
+        "price": 800,
+        "length": 8
+    },
+    {
+        "destination":"NY",
+        "departure":"02/03/2020",
+        "arrival":"02/04/2020",
+        "connections": 5,
+        "price": 400,
+        "length": 7
+    },
+    {
+        "destination":"CAIRO",
+        "departure":"02/25/2020",
+        "arrival":"02/25/2020",
+        "connections": 2,
+        "price": 100,
+        "length": 1.5
+    }
+]

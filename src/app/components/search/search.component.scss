@@ -1,0 +1,22 @@
+    form {
+        .form-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+    
+            mat-form-field {
+                width: 100%;
+            }
+        }
+    
+        .action-buttons{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+
+            button {
+                margin: 0 1%;
+                width: 20%;
+            }
+        }
+    }

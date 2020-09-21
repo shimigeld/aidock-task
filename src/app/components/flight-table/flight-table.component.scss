@@ -1,0 +1,16 @@
+mat-table {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    
+    mat-header-cell {
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+    mat-cell {
+        text-align: center;
+        justify-content:center;
+    }
+}
