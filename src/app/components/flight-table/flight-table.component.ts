@@ -16,17 +16,21 @@ export class FlightTableComponent implements OnInit, AfterViewChecked, OnDestroy
 
   displayedColumns: string[] = ['destination', 'departure', 'arrival', 'connections', 'price' , 'length'];
   dataSource: MatTableDataSource<FlightRecord>;
-  isFoundFlights = false;
+  isFoundFlights = undefined;
   private flightsSearchResultSubscription: Subscription;
 
   constructor(private flightService: FlightService) { }
   ngOnInit(): void {
     this.flightsSearchResultSubscription = this.flightService.searchFligthsResult.subscribe(data => {
-      if (data?.length > 0) {
-        this.isFoundFlights = true;
-        this.dataSource = new MatTableDataSource(data);
+      if (!data) {
+        this.isFoundFlights = undefined;
       } else {
-        this.isFoundFlights = false;
+        if (data?.length > 0) {
+          this.isFoundFlights = true;
+          this.dataSource = new MatTableDataSource(data);
+        } else {
+          this.isFoundFlights = false;
+        }
       }
     });
   }
