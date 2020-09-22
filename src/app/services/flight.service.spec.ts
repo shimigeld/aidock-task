@@ -1,4 +1,4 @@
-import {  TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { FlightService } from './flight.service';
 import { FlightRecord } from '../models/flight-record';
