@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSliderChange } from '@angular/material/slider';
 import { Subscription } from 'rxjs';
@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit, OnDestroy {
   searchFormGroup: FormGroup;
   connectionSelectorsValues: Array<[string, number]>;
   flightMaxPrice: number;
-  flightDateRange: [Date, Date];
+  flightDateRange: [Date, Date] = [new Date(), new Date()];
 
   private dataIsLoadersSubscription: Subscription;
 
